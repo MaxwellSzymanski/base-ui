@@ -1,5 +1,4 @@
 import React from "react"
-import { ReactComponent as Logo } from "./logo.svg"
 
 export interface PageProps {
   title?: string
@@ -157,9 +156,6 @@ export const Page: React.FC<PageProps> = (
               </div>
             </div>
           </div>
-        </div>
-        <div className="w-60 h-60 bg-gray-100 flex flex-col items-center justify-center mx-auto">
-          <Logo />
         </div>
       </section>
     </>
