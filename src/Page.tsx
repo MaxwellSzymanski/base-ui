@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import { Button } from "./components"
 
 export interface PageProps {
   title?: string
@@ -7,6 +8,9 @@ export interface PageProps {
 export const Page: React.FC<PageProps> = (
   { title } = { title: "A simple Tailiwind template" }
 ) => {
+
+  const [saved, setSaved] = useState(false);
+  
   return (
     <>
       <section className="text-gray-600 body-font">
@@ -155,6 +159,11 @@ export const Page: React.FC<PageProps> = (
                 </a>
               </div>
             </div>
+          </div>
+          <hr className="border-gray-300 m-10"/>
+          <div className="flex flex-row gap-2 justify-center my-4">
+            <Button label={saved ? "Remove story" : "Save story"} onClick={() => {setSaved(!saved)}} variant="primary" icon="bookmark" solidIcon={saved}/>
+            <Button label="Like story" onClick={() => console.log("View entry")} variant="primary" icon="thumbs-up" solidIcon/>
           </div>
         </div>
       </section>

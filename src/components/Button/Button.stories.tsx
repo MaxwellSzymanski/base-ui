@@ -9,9 +9,11 @@ export default {
   component: Button,
   argTypes: {
     label: { control: { type: 'text' } },
+    size: { control: { type: "select", defaultValue: "md" } },
     variant: { control: { type: "radio", defaultValue: "primary" } },
     color: { control: { type: "select", defaultValue: "blue" } },
     icon: { control: { type: "select", defaultValue: undefined } },
+    solidIcon: { control: { type: "boolean", defaultValue: true } },
     onClick: { control: { type: "Event"} },
   }
 } as Meta
@@ -29,5 +31,5 @@ export const Button2 = Template.bind({})
 Button2.args = {
   label: "Secondary button",
   variant: "secondary",
-  color: "gray"
+  color: "blue"
 }
